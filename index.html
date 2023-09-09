@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TheraSpeak</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gradient-to-br from-black to-purple-900 p-10 text-gray-200 min-h-screen">
+
+<!-- Navbar -->
+<nav class="mb-10 p-5 rounded-lg flex justify-between items-center">
+    <!-- Logo -->
+    <a href="index.html">
+        <img src="TheraSpeak.png" alt="TheraSpeak Logo" class="h-10 w-auto">
+    </a>
+
+    <!-- Navigation Links -->
+    <ul class="flex space-x-20">
+        <li><a href="index.html" class="text-white hover:text-purple-500">Home</a></li>
+        <li><a href="about.html" class="text-white hover:text-purple-500">About</a></li>
+        <li><a href="playground.html" class="text-white hover:text-purple-500">Playground</a></li>
+    </ul>
+</nav>
+
+<!-- Main Content -->
+<div class="container mx-auto mt-20 text-center max-w-3xl">
+    <h1 class="text-6xl font-bold mb-5">Welcome to TheraSpeak</h1>
+    <p class="text-base mb-5">
+        TheraSpeak is a cutting-edge platform designed to transcribe and generate prompts from live audio transcriptions of mental health calls. Our mission is to support people with mental health issues by helping them communicate to hotlines more effectively.
+    </p>
+    <a href="playground.html" class="bg-purple-600 hover:bg-purple-700 text-white py-2 px-4 rounded-full mb-2 inline-block">Open Playground</a><br>
+    <button onclick="scrollDown()" class="focus:outline-none mt-2">
+        <svg width="24" height="24" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="text-white">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+        </svg>
+    </button>
+</div>
+
+<!-- Background Research Section -->
+<div class="container mx-auto mt-20 max-w-3xl bg-gray-800 p-10 rounded-lg shadow-lg">
+    <h2 class="text-4xl font-bold mb-5 text-center">Background Research</h2>
+    <div class="flex space-x-10 py-10">
+        <!-- Left Section: Data and Facts -->
+        <div class="w-1/2 space-y-4 border-l-4 border-purple-500 pl-4">
+            <ol class="list-decimal">
+                <li class="py-3">Each year, over 800,000 people die from suicide.</li>
+                <li class="py-3">More people die from suicide than car accidents or homicide and AIDS combined.</li>
+                <li class="py-3">22.8% of U.S. adults experienced mental illness in 2021 with 5.5% of them experiencing severe mental illness.</li>
+                <li class="py-3">In 2023, nearly 20% of high school students report serious thoughts of suicide.</li>
+            </ol>
+        </div>
+        <!-- Right Section: YouTube Video -->
+        <div class="w-1/2">
+            <iframe class="rounded-lg shadow-md" width="100%" height="315" src="https://www.youtube.com/embed/z-IR48Mb3W0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+    </div>
+    <div class="flex space-x-10 mt-10">
+        <!-- Left Section: Graph/Chart -->
+        <div class="w-1/2">
+            <div class="bg-gray-600 h-48 rounded-md shadow-md">
+                <img src="suicide-chart.jpg" alt="">
+            </div>
+        </div>
+        <!-- Right Section: Data and Facts -->
+        <div class="w-1/2 space-y-4 border-l-4 border-purple-500 pl-4">
+            <ol class="list-decimal">
+                <li class="py-3">Each year, over 800,000 people die from suicide.</li>
+                <li class="py-3">More people die from suicide than car accidents or homicide and AIDS combined.</li>
+                <li class="py-3">22.8% of U.S. adults experienced mental illness in 2021 with 5.5% of them experiencing severe mental illness.</li>
+                <li class="py-3">In 2023, nearly 20% of high school students report serious thoughts of suicide.</li>
+            </ol>
+        </div>
+    </div>
+</div>
+
+<!-- Our Solution Section -->
+<div class="container mx-auto mt-20 max-w-3xl">
+    <h2 class="text-4xl font-bold mb-5 text-center">Our Solution</h2>
+    <div class="flex space-x-10">
+        <!-- Left Section: Data and Facts -->
+        <div class="w-1/2">
+            <ul class="list-disc pl-5">
+                <li>Fact 1 about TheraSpeak's solution.</li>
+                <li>Fact 2 about the advanced algorithms used.</li>
+                <li>Fact 3 about the user-friendly interface.</li>
+            </ul>
+        </div>
+        <!-- Right Section: Charts and Graphs -->
+        <div class="w-1/2">
+            <div class="bg-gray-600 h-48 rounded-md">
+                <p class="text-center pt-20">Chart/Graph Placeholder</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    function scrollDown() {
+        window.scrollBy(0, window.innerHeight);
+    }
+</script>
+
+</body>
+</html>
