@@ -24,7 +24,7 @@
         }
     </style>
 </head>
-<body class="bg-gradient-to-br from-black to-purple-900 p-10 text-gray-200 min-h-screen">
+<body class="bg-gradient-to-b from-purple-900 to-black p-10 text-gray-200 min-h-screen">
 
 <!-- Navbar -->
 <nav class="mb-10 p-5 rounded-lg flex justify-between items-center">
@@ -37,7 +37,7 @@
     <ul class="flex space-x-20">
         <li><a href="index.html" class="text-white hover:text-purple-500">Home</a></li>
         <li><a href="about.html" class="text-white hover:text-purple-500">About</a></li>
-        <li><a href="login.html" class="text-white hover:text-purple-500">Login</a></li>
+        <li><a href="dashboard.html" class="text-white hover:text-purple-500">Dashboard</a></li>
     </ul>
 </nav>
 
@@ -58,31 +58,35 @@
     <!-- Right side: Prompts -->
     <div class="w-1/2 space-y-5">
         <!-- Each prompt box -->
-        <div class="bg-gray-700 p-5 rounded-xl shadow-lg text-white whitespace-pre-wrap relative">
-            <div class="absolute top-0 right-5 flex space-x-2 mb-2 p-4">
-                <button class="thumbs-up bg-green-500 p-2 rounded-full focus:outline-none" onclick="feedback(true)">👍</button>
-                <button class="thumbs-down bg-red-500 p-2 rounded-full focus:outline-none" onclick="feedback(false)">👎</button>
+        <div class="prompt-box bg-gray-700 p-5 rounded-xl shadow-lg text-white whitespace-pre-wrap relative">
+            <p id="prompt1" class="typing bg-gray-800 p-2 rounded mb-4"></p>
+            <div class="flex justify-center items-center space-x-2 mt-2">
+                <span class="text-gray-300 text-sm font-semibold">Was this helpful?</span>
+                <button class="thumbs-up bg-green-500 p-2 rounded-full focus:outline-none" onclick="feedback(true, this)">👍</button>
+                <button class="thumbs-down bg-red-500 p-2 rounded-full focus:outline-none" onclick="feedback(false, this)">👎</button>
             </div>
-            <p id="prompt1" class="typing"></p>
         </div>
-        <div class="bg-gray-700 p-5 rounded-xl shadow-lg text-white whitespace-pre-wrap relative">
-            <div class="absolute top-0 right-5 flex space-x-2 mb-2 p-4">
-                <button class="thumbs-up bg-green-500 p-2 rounded-full focus:outline-none" onclick="feedback(true)">👍</button>
-                <button class="thumbs-down bg-red-500 p-2 rounded-full focus:outline-none" onclick="feedback(false)">👎</button>
+        <div class="prompt-box bg-gray-700 p-5 rounded-xl shadow-lg text-white whitespace-pre-wrap relative">
+            <p id="prompt2" class="typing bg-gray-800 p-2 rounded mb-4"></p>
+            <div class="flex justify-center items-center space-x-2 mt-2">
+                <span class="text-gray-300 text-sm font-semibold">Was this helpful?</span>
+                <button class="thumbs-up bg-green-500 p-2 rounded-full focus:outline-none" onclick="feedback(true, this)">👍</button>
+                <button class="thumbs-down bg-red-500 p-2 rounded-full focus:outline-none" onclick="feedback(false, this)">👎</button>
             </div>
-            <p id="prompt2" class="typing"></p>
         </div>
     </div>
 
 </div>
 
 <script>
-    function feedback(isPositive) {
+    function feedback(isPositive, btn) {
         if (isPositive) {
             alert("Thank you for your feedback. We'll make sure to generate similar responses in the future.");
         } else {
             alert("Thank you for your feedback. We'll make sure to not generate this response again.");
         }
+        // Delete the entire prompt div
+        btn.closest('.prompt-box').remove();
     }
 
     function clearTextbox() {
