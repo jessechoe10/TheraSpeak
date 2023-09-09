@@ -51,7 +51,7 @@
         <!-- User Input Textbox -->
         <div class="mt-5 flex items-center">
             <textarea class="flex-grow p-3 rounded-lg bg-gray-800 text-white" placeholder="Enter your response here..."></textarea>
-            <button onclick="clearTextbox()" class="ml-3 bg-purple-600 hover:bg-purple-700 text-white font-bold py-2 px-4 rounded-lg focus:outline-none transition duration-300 ease-in-out transform hover:scale-105">Submit</button>
+            <button onclick="addUserTextToTranscription()" class="ml-3 bg-purple-600 hover:bg-purple-700 text-white font-bold py-2 px-4 rounded-lg focus:outline-none transition duration-300 ease-in-out transform hover:scale-105">Submit</button>
         </div>
     </div>
 
@@ -89,13 +89,16 @@
         btn.closest('.prompt-box').remove();
     }
 
-    function clearTextbox() {
-        document.querySelector("textarea").value = "";
+    function addUserTextToTranscription() {
+        const userText = document.querySelector("textarea").value;
+        const transcription = document.getElementById("transcription");
+        transcription.textContent += "Client: " + userText + "\n" + "\n";
+        document.querySelector("textarea").value = ""; // Clear the textarea after adding the text
     }
 
     // Typing animation
     document.addEventListener("DOMContentLoaded", function() {
-        const transcriptionText = "Hello? Is someone there? Yes, hello! You've reached the mental health hotline. My name is Sarah. How can I assist you today? Hi, Sarah. My name's Alex. I've been feeling really overwhelmed lately. I can't seem to shake this constant feeling of sadness and anxiety. Hi, Alex. I'm here to listen and help. It takes courage to reach out, so thank you for sharing that with me. Can you tell me a bit more about what's been going on? Is there something specific that's been bothering you? Well, it's a combination of things. My job has been really stressful, and I'm having trouble sleeping because of it. On top of that, my personal life has been strained, and I just can't seem to find any joy in things I used to love doing. I'm really sorry to hear that you're going through such a tough time, Alex. It sounds like you're dealing with a lot of stressors. You're not alone in this, though. We can work through it together. Can you tell me more about the sleep issues you've been experiencing? Yeah, I just toss and turn at night, my mind racing with all these worries. I'm exhausted during the day, and it's making everything even harder to cope with.";
+        const transcriptionText = "";
         const prompt1Text = "I'm really sorry to hear that you're going through such a tough time, Alex. It sounds like you're dealing with a lot of stressors. You're not alone in this, though. We can work through it together. Can you tell me more about the sleep issues you've been experiencing?";
         const prompt2Text = "Sleep problems can certainly make everything feel more challenging. Let's start by exploring some relaxation techniques that might help with your sleep. Have you tried any relaxation exercises before, like deep breathing or progressive muscle relaxation?";
 
