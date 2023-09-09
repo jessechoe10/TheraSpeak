@@ -5,91 +5,135 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TheraSpeak</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        .gradient-section {
+            background: linear-gradient(to bottom, var(--tw-gradient-stops));
+        }
+    </style>
 </head>
-<body class="bg-gradient-to-br from-black to-purple-900 p-10 text-gray-200 min-h-screen">
+<body class="bg-black text-gray-200 min-h-screen">
 
-<!-- Navbar -->
-<nav class="mb-10 p-5 rounded-lg flex justify-between items-center">
-    <!-- Logo -->
-    <a href="index.html">
-        <img src="TheraSpeak.png" alt="TheraSpeak Logo" class="h-10 w-auto">
-    </a>
+<div class="gradient-section bg-gradient-to-b from-purple-900 to-black pb-10">
+    <!-- Navbar -->
+    <nav class="mb-10 p-5 rounded-lg flex justify-between items-center p-10">
+        <!-- Logo -->
+        <a href="index.html">
+            <img src="TheraSpeak.png" alt="TheraSpeak Logo" class="h-10 w-auto">
+        </a>
 
-    <!-- Navigation Links -->
-    <ul class="flex space-x-20">
-        <li><a href="index.html" class="text-white hover:text-purple-500">Home</a></li>
-        <li><a href="about.html" class="text-white hover:text-purple-500">About</a></li>
-        <li><a href="playground.html" class="text-white hover:text-purple-500">Playground</a></li>
-    </ul>
-</nav>
+        <!-- Navigation Links -->
+        <ul class="flex space-x-20">
+            <li><a href="index.html" class="text-white hover:text-purple-500">Home</a></li>
+            <li><a href="about.html" class="text-white hover:text-purple-500">About</a></li>
+            <li><a href="login.html" class="text-white hover:text-purple-500">Login</a></li>
+        </ul>
+    </nav>
 
-<!-- Main Content -->
-<div class="container mx-auto mt-20 text-center max-w-3xl">
-    <h1 class="text-6xl font-bold mb-5">Welcome to TheraSpeak</h1>
-    <p class="text-base mb-5">
-        TheraSpeak is a cutting-edge platform designed to transcribe and generate prompts from live audio transcriptions of mental health calls. Our mission is to support people with mental health issues by helping them communicate to hotlines more effectively.
-    </p>
-    <a href="playground.html" class="bg-purple-600 hover:bg-purple-700 text-white py-2 px-4 rounded-full mb-2 inline-block">Open Playground</a><br>
-    <button onclick="scrollDown()" class="focus:outline-none mt-2">
-        <svg width="24" height="24" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="text-white">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
-        </svg>
-    </button>
+    <!-- Main Content -->
+    <div class="container mx-auto mt-20 text-center max-w-3xl p-10">
+        <h1 class="text-6xl font-bold mb-5">Welcome to TheraSpeak</h1>
+        <p class="text-base mb-5">
+            TheraSpeak is a cutting-edge platform designed to transcribe and generate prompts from live audio transcriptions of mental health calls. Our mission is to support people with mental health issues by helping hotline workers with supportive responses.
+        </p>
+        <a href="playground.html" class="bg-purple-600 hover:bg-purple-700 text-white py-2 px-4 rounded-full mb-2 inline-block">Open Playground</a><br>
+        <button onclick="scrollDown()" class="focus:outline-none mt-2">
+            <svg width="24" height="24" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="text-white">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+            </svg>
+        </button>
+    </div>
 </div>
 
 <!-- Background Research Section -->
-<div class="container mx-auto mt-20 max-w-3xl bg-gray-800 p-10 rounded-lg shadow-lg">
-    <h2 class="text-4xl font-bold mb-5 text-center">Background Research</h2>
+<div class="container mx-auto mt-20 w-full bg-black p-10 shadow-lg">
+    <h2 class="text-4xl font-bold mb-5 text-center text-white">Background Research</h2>
     <div class="flex space-x-10 py-10">
         <!-- Left Section: Data and Facts -->
-        <div class="w-1/2 space-y-4 border-l-4 border-purple-500 pl-4">
-            <ol class="list-decimal">
-                <li class="py-3">Each year, over 800,000 people die from suicide.</li>
-                <li class="py-3">More people die from suicide than car accidents or homicide and AIDS combined.</li>
-                <li class="py-3">22.8% of U.S. adults experienced mental illness in 2021 with 5.5% of them experiencing severe mental illness.</li>
-                <li class="py-3">In 2023, nearly 20% of high school students report serious thoughts of suicide.</li>
-            </ol>
+        <div class="w-1/2 space-y-4">
+            <div class="bg-gray-800 p-5 rounded-lg shadow-md border border-gray-700 flex items-center space-x-4">
+                <span class="text-purple-400 text-2xl">📉</span>
+                <p class="text-white">Each year, over 800,000 people die from suicide.</p>
+            </div>
+            <div class="bg-gray-800 p-5 rounded-lg shadow-md border border-gray-700 flex items-center space-x-4">
+                <span class="text-purple-400 text-2xl">🚗</span>
+                <p class="text-white">More people die from suicide than car accidents or homicide and AIDS combined.</p>
+            </div>
+            <div class="bg-gray-800 p-5 rounded-lg shadow-md border border-gray-700 flex items-center space-x-4">
+                <span class="text-purple-400 text-2xl">🧠</span>
+                <p class="text-white">22.8% of U.S. adults experienced mental illness in 2021 with 5.5% of them experiencing severe mental illness.</p>
+            </div>
+            <div class="bg-gray-800 p-5 rounded-lg shadow-md border border-gray-700 flex items-center space-x-4">
+                <span class="text-purple-400 text-2xl">🎓</span>
+                <p class="text-white">In 2023, nearly 20% of high school students report serious thoughts of suicide.</p>
+            </div>
         </div>
         <!-- Right Section: YouTube Video -->
         <div class="w-1/2">
-            <iframe class="rounded-lg shadow-md" width="100%" height="315" src="https://www.youtube.com/embed/z-IR48Mb3W0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <iframe width="100%" height="380" src="https://www.youtube.com/embed/z-IR48Mb3W0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="rounded-lg shadow-md mb-4"></iframe>
         </div>
     </div>
     <div class="flex space-x-10 mt-10">
         <!-- Left Section: Graph/Chart -->
         <div class="w-1/2">
-            <div class="bg-gray-600 h-48 rounded-md shadow-md">
-                <img src="suicide-chart.jpg" alt="">
+            <div>
+                <img src="suicide-chart.jpg" alt="" class="rounded-md">
             </div>
         </div>
         <!-- Right Section: Data and Facts -->
-        <div class="w-1/2 space-y-4 border-l-4 border-purple-500 pl-4">
-            <ol class="list-decimal">
-                <li class="py-3">Each year, over 800,000 people die from suicide.</li>
-                <li class="py-3">More people die from suicide than car accidents or homicide and AIDS combined.</li>
-                <li class="py-3">22.8% of U.S. adults experienced mental illness in 2021 with 5.5% of them experiencing severe mental illness.</li>
-                <li class="py-3">In 2023, nearly 20% of high school students report serious thoughts of suicide.</li>
-            </ol>
+        <div class="w-1/2 space-y-4">
+            <div class="bg-gray-800 p-5 rounded-lg shadow-md border border-gray-700 flex items-center space-x-4">
+                <span class="text-purple-400 text-2xl">🔟</span>
+                <p class="text-white">Suicide is the 10th leading cause of death in the United States and the 2nd leading cause of death for teens and young adults.</p>
+            </div>
+            <div class="bg-gray-800 p-5 rounded-lg shadow-md border border-gray-700 flex items-center space-x-4">
+                <span class="text-purple-400 text-2xl">📉</span>
+                <p class="text-white">Longer wait times for suicide hotlines lead to more deaths.</p>
+            </div>
+            <div class="bg-gray-800 p-5 rounded-lg shadow-md border border-gray-700 flex items-center space-x-4">
+                <span class="text-purple-400 text-2xl">⌛</span>
+                <p class="text-white">Some people had to wait 15 minutes on hold after calling 988, the suicide hotline number.</p>
+            </div>
+            <div class="bg-gray-800 p-5 rounded-lg shadow-md border border-gray-700 flex items-center space-x-4">
+                <span class="text-purple-400 text-2xl">😧</span>
+                <p class="text-white">People ended up abandoning on calls 60% of the time.</p>
+            </div>
         </div>
     </div>
 </div>
 
 <!-- Our Solution Section -->
-<div class="container mx-auto mt-20 max-w-3xl">
-    <h2 class="text-4xl font-bold mb-5 text-center">Our Solution</h2>
-    <div class="flex space-x-10">
+<div class="container mx-auto mt-20 w-full bg-black p-10 shadow-lg">
+    <h2 class="text-4xl font-bold mb-5 text-center text-white">Our Solution</h2>
+    <div class="flex space-x-10 py-10">
         <!-- Left Section: Data and Facts -->
-        <div class="w-1/2">
-            <ul class="list-disc pl-5">
-                <li>Fact 1 about TheraSpeak's solution.</li>
-                <li>Fact 2 about the advanced algorithms used.</li>
-                <li>Fact 3 about the user-friendly interface.</li>
-            </ul>
+        <div class="w-1/2 space-y-4">
+            <div class="bg-gray-800 p-5 rounded-lg shadow-md border border-gray-700 flex items-center space-x-4">
+                <span class="text-purple-400 text-2xl">🔊</span>
+                <p class="text-white">We generate live audio transcriptions of the hotline calls using Amazon Web Services (AWS).</p>
+            </div>
+            <div class="bg-gray-800 p-5 rounded-lg shadow-md border border-gray-700 flex items-center space-x-4">
+                <span class="text-purple-400 text-2xl">📞</span>
+                <p class="text-white">We use Twillo to effectively process the call management backend.</p>
+            </div>
+            <div class="bg-gray-800 p-5 rounded-lg shadow-md border border-gray-700 flex items-center space-x-4">
+                <span class="text-purple-400 text-2xl">🤖</span>
+                <p class="text-white">We used ChatGPT OpenAI API to generate prompts based on the live transcription text.</p>
+            </div>
+            <div class="bg-gray-800 p-5 rounded-lg shadow-md border border-gray-700 flex items-center space-x-4">
+                <span class="text-purple-400 text-2xl">📱</span>
+                <p class="text-white">We used Metaphor's API to generate resources the user can use and send them the resources via Twillo's texting service.</p>
+            </div>
+            <div class="bg-gray-800 p-5 rounded-lg shadow-md border border-gray-700 flex items-center space-x-4">
+                <span class="text-purple-400 text-2xl">👍</span>
+                <p class="text-white">We trained a reinforcement learning model to improve prompt generation using 👍 and 👎 buttons for user feedback.</p>
+            </div>
         </div>
-        <!-- Right Section: Charts and Graphs -->
-        <div class="w-1/2">
-            <div class="bg-gray-600 h-48 rounded-md">
-                <p class="text-center pt-20">Chart/Graph Placeholder</p>
+        <!-- Right Section: YouTube Video -->
+        <div class="w-1/2 flex items-center"> <!-- Added flex and items-center classes here -->
+            <div>
+                <a href="playground.html"> <!-- Added anchor tag to wrap the image -->
+                    <img src="playground.png" alt="Playground" class="rounded-md">
+                </a>
             </div>
         </div>
     </div>
