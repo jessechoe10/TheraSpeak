@@ -33,7 +33,7 @@
     <div class="container mx-auto mt-20 text-center max-w-3xl p-10">
         <h1 class="text-6xl font-bold mb-5">Welcome to TheraSpeak</h1>
         <p class="text-base mb-5">
-            TheraSpeak is a cutting-edge platform designed to transcribe and generate prompts from live audio transcriptions of mental health calls. Our mission is to support people with mental health issues by helping hotline workers with supportive responses.
+            TheraSpeak is a cutting-edge platform designed to transcribe and generate prompts from live audio transcriptions of suicide hotline calls. Our mission is to support people with mental health issues by providing hotline workers with empathetic responses.
         </p>
         <a href="login.html" class="bg-purple-600 hover:bg-purple-700 text-white py-2 px-4 rounded-full mb-2 inline-block">Open Playground</a><br>
         <button onclick="scrollDown()" class="focus:outline-none mt-2">
@@ -74,11 +74,16 @@
     </div>
     <div class="flex space-x-10 mt-10">
         <!-- Left Section: Graph/Chart -->
-        <div class="w-1/2">
+        <div class="w-full flex items-center justify-center space-x-5">
             <div>
-                <img src="suicide-chart.jpg" alt="" class="rounded-md">
+                <img src="matlab2.png" alt="Dashboard" class="rounded-md">
+                <p class="text-center text-white mt-2">Images were generated on MatLab</p> <!-- Added caption -->
             </div>
-        </div>
+            <div>
+                <img src="matlab1.png" alt="Text Playground" class="rounded-md">
+                <p class="text-center text-white mt-2">Images were generated on MatLab</p> <!-- Added caption -->
+            </div>
+        </div>        
         <!-- Right Section: Data and Facts -->
         <div class="w-1/2 space-y-4">
             <div class="bg-gray-800 p-5 rounded-lg shadow-md border border-gray-700 flex items-center space-x-4">
@@ -109,7 +114,7 @@
         <div class="w-1/2 space-y-4">
             <div class="bg-gray-800 p-5 rounded-lg shadow-md border border-gray-700 flex items-center space-x-4">
                 <span class="text-purple-400 text-2xl">🔊</span>
-                <p class="text-white">We generate live audio transcriptions of the hotline calls using Amazon Web Services (AWS).</p>
+                <p class="text-white">We generate live audio transcriptions of the hotline calls using Amazon Web Services (AWS) and Assembly AI.</p>
             </div>
             <div class="bg-gray-800 p-5 rounded-lg shadow-md border border-gray-700 flex items-center space-x-4">
                 <span class="text-purple-400 text-2xl">📞</span>
@@ -128,12 +133,13 @@
                 <p class="text-white">We trained a reinforcement learning model to improve prompt generation using 👍 and 👎 buttons for user feedback.</p>
             </div>
         </div>
-        <!-- Right Section: YouTube Video -->
-        <div class="w-1/2 flex items-center"> <!-- Added flex and items-center classes here -->
+        <!-- Right Section: Demo Images -->
+        <div class="w-1/2 flex flex-col items-center space-y-5"> <!-- Changed to flex-col and added space-y-5 for spacing -->
             <div>
-                <a href="playground.html"> <!-- Added anchor tag to wrap the image -->
-                    <img src="playground.png" alt="Playground" class="rounded-md">
-                </a>
+                <img src="dashboard.png" alt="Dashboard" class="rounded-md"> <!-- Added w-3/4 for consistent width -->
+            </div>
+            <div>
+                <img src="textplayground.png" alt="Text Playground" class="rounded-md">
             </div>
         </div>
     </div>
