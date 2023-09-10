@@ -26,7 +26,7 @@ received_messages = client.messages.list(
 prompt = "Act like a therapist: "
 
 global oldMessage, firstLine
-oldMessage, firstLine = ('hi', '15712440826'), 'abcdef'
+oldMessage, firstLine = (received_messages[0].body, received_messages[0].from_), 'abcdef'
 
 def generate_response(text):
     response = openai.Completion.create(
